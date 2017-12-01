@@ -3,10 +3,52 @@
   <head>
     <meta charset="utf-8">
     <title>vue-test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div id="app"></div>
+
+  <div id="table">
+    <div id="main-table">
+        <div class="table-container">
+          <div class="table car-table" data-empty="Автомобили не найдеы">
+            <div class="thead" id="vueTest">
+              <div class="thead__cell">Фото</div>
+              <div class="thead__cell">Лот</div>
+              <div class="thead__cell">Год</div>
+              <div class="thead__cell">Марка</div>
+              <div class="thead__cell">Модель</div>
+              <div class="thead__cell">Двигатель</div>
+              <div class="thead__cell">Топливо</div>
+              <div class="thead__cell">КПП</div>
+              <div class="thead__cell">Одометр</div>
+              <div class="thead__cell">Тип привода</div>
+              <div class="thead__cell">Основные моменты</div>
+              <div class="thead__cell">Основные повреждения</div>
+              <div class="thead__cell">Вторичные повреждения</div>
+              <div class="thead__cell">Дата</br> аукциона</div>
+              <div class="thead__cell">Текушая</br> ставка</div>
+              <div class="thead__cell">Купить сейчас</div>
+              <div class="thead__cell">Расположение</div>
+              <div class="thead__cell">Тип документа</div>
+            </div>
+            <div class="tbody" id="table-body">
+
+              <div class="table__row" v-for="item in cars">
+
+                <div class="table__row-cell" v-for="items in item">{{items}}</div>
+
+              </div>
+            </div>
+          </div>
+          <div class="table-pagination">
+          </div>
+        </div>
+    </div>
+  </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="/dist/build.js"></script>
-    <script src="/scr/common.js"></script>
+    <script src="common.js"></script>
   </body>
 </html>
