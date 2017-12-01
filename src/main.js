@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-new Vue({
+const app = new Vue({
   el: '#app',
-  render: h => h(App)
+    template: `<app></app>`,
+  components: { App },
+    //render: h => h(App)
 });
-
-
+app.sayHellow();
 

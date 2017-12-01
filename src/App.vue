@@ -1,4 +1,9 @@
 <template>
+
+
+  <div id="table">
+    <div id="main-table">
+
   <div id="app">
 
     <div class="table-container">
@@ -36,11 +41,14 @@
       </div>
     </div>
   </div>
+    </div>
+  </div>
 </template>
 
 <script>
 
   let car = {model: 'Totota', year: '2000', test: 'test'};
+  let val = {model: 'Totota', year: '2000', test: 'test'};
 
     export default {
         data () {
@@ -48,10 +56,17 @@
                 cars: {
                     car,
                     car2: {model: 'Totota', year: '2000'},
-                    car3: {model: 'Totota', year: '2000', test: 'test'},
-                    car4: {model: 'Totota', year: '2000', test1: 'test', test: 'test'}
+                    car3: {model: 'Totota', year: '2000', test: 'test', common: 'test'},
+                    car4: {model: 'Totota', year: '2000', test1: 'test', test2: 'test', test3: 'test', test4: 'test', test5: 'test', test6: 'test', test7: 'test', test8: 'test', test9: 'test', test10: 'test', test11: 'test', test12: 'test', test: 'test', test: 'test', test: 'test', test: 'test', test: 'test'}
                 }
             }
+        },
+        methods: {
+
+            sayHellow(){
+                alert('hellow');
+            }
+
         }
     }
 
